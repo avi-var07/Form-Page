@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Page</title>
     <style>
+    @media (max-width: 768px) {
+    form {
+        width: 90%;
+        margin: 0 auto; 
+    }
+
+    input, button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
         *{
             font-family: 'Lucida Sans';
         }
         body{
+            overflow-x: hidden;
             background-image: url(body\ backgorund.webp);
             background-size: 100%;
             background-repeat: no-repeat;
