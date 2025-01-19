@@ -5,112 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Page</title>
     <style>
-        * {
-            font-family: 'Lucida Sans', sans-serif;
+        *{
+            font-family: 'Lucida Sans';
         }
-        body {
-            overflow-x: hidden;
-            background-image: url('body/background.webp');
-            background-size: cover;
+        body{
+            background-image: url(body\ backgorund.webp);
+            background-size: 100%;
             background-repeat: no-repeat;
+            object-fit: cover;
         }
-        h1 {
+        input{
+            font-size: 20px;
+            min-width: 100px;
+            border: solid;
+        }
+        h1{
             text-align: center;
             font-size: 45px;
             font-weight: bold;
             color: black;
-            margin: 20px 0;
         }
-        #Formdiv {
-            background-image: url('form/background.webp');
-            margin: 20px auto;
+        button{
+            color: red;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        a{
+            text-decoration: none;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        #Formdiv{
+            background-image: url(form\ backgorund.webp);
+            margin:100px;
             text-align: center;
             border: 2px solid black;
             border-radius: 20px;
-            padding: 20px;
-            width: 90%; /* Changed to make it responsive */
-            max-width: 500px; /* Keep it fixed for larger screens */
+            display: flexbox;
+            padding-top: 100px;
+            height: 400px;
+            width: 500px;
         }
-        .subdiv {
+        .maindiv{
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap; /* Allow wrapping for small screens */
-            margin: 10px 0;
+            justify-content: center;
+            align-items: center;
         }
-        label {
+        label{
             font-weight: bold;
-            font-size: 20px;
-            flex: 1;
-            margin-bottom: 5px;
+            font-size: 25px;
         }
-        input {
-            font-size: 18px;
-            border: 1px solid #000;
-            border-radius: 5px;
-            flex: 2;
-            padding: 5px;
-        }
-        .dob {
-            width: 100%;
-        }
-        button {
-            color: white;
-            background-color: red;
-            font-size: 20px;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        .buttons {
+        .subdiv{
+            color: wheat;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap; /* Make buttons stack on small screens */
-            gap: 10px; /* Add spacing between buttons */
+            flex-direction: row;
+            width: 90%;
+            margin: 10px;
         }
-
-        /* Minimal media query for mobile */
-        @media (max-width: 768px) {
-            .subdiv {
-                flex-direction: column; /* Stack label and input */
-                align-items: flex-start;
-            }
-            button {
-                width: 100%; /* Buttons take full width on mobile */
-            }
+        .dob{
+            width: 260px;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            margin: 50px;
+            justify-content: space-evenly;
         }
     </style>
 </head>
 <body>
+
     <h1>Fill Out The Form Below!</h1>
     <hr>
-    <div id="Formdiv">
+    <div class="maindiv">
         <form action="Thankyou.html" method="get">
-            <div class="subdiv">
-                <label for="fname">First Name:</label>
-                <input type="text" placeholder="First Name" required>
-            </div>
-            <div class="subdiv">
-                <label for="lname">Last Name:</label>
-                <input type="text" placeholder="Last Name" required>
-            </div>
-            <div class="subdiv">
-                <label for="email">Email Id:</label>
-                <input type="email" placeholder="user@gmail.com" required>
-            </div>
-            <div class="subdiv">
-                <label for="pass">Password:</label>
-                <input type="password" placeholder="Password" maxlength="12" minlength="8" required>
-            </div>
-            <div class="subdiv">
-                <label for="DOB">Date Of Birth:</label>
-                <input class="dob" type="date" placeholder="DOB" required>
-            </div>
-            <div class="buttons">
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-            </div>
-        </form>
+            <div id="Formdiv">
+                <div class="subdiv">
+                    <label for="fname">First Name: </label>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="subdiv">
+                    <label for="lname">Last Name: </label>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="subdiv">
+                    <label for="email">Email Id: </label>
+                    <input type="email" placeholder="user@gmail.com" required >
+                </div>
+                <div class="subdiv">
+                    <label for="pass">Password: </label>
+                    <input type="password" placeholder="Password" maxlength="12" minlength="8" required>
+                </div>
+                <div class="subdiv">
+                    <label for="DOB">Date Of Birth: </label>
+                    <input class = "dob" type="date" placeholder="DOB" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
