@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans';
+        }
+        body{
+            background-image: url(body\ backgorund.webp);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        input{
+            font-size: 20px;
+            min-width: 100px;
+            border: solid;
+        }
+        h1{
+            text-align: center;
+            font-size: 45px;
+            font-weight: bold;
+            color: black;
+        }
+        button{
+            color: red;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        a{
+            text-decoration: none;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        #Formdiv{
+            background-image: url(form\ backgorund.webp);
+            margin:100px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flexbox;
+            padding-top: 100px;
+            height: 400px;
+            width: 500px;
+        }
+        .maindiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label{
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .subdiv{
+            color: wheat;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 90%;
+            margin: 10px;
+        }
+        .dob{
+            width: 260px;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            margin: 50px;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fill Out The Form Below!</h1>
+    <hr>
+    <div class="maindiv">
+        <form action="Thankyou.html" method="get">
+            <div id="Formdiv">
+                <div class="subdiv">
+                    <label for="fname">First Name: </label>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+                <div class="subdiv">
+                    <label for="lname">Last Name: </label>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="subdiv">
+                    <label for="email">Email Id: </label>
+                    <input type="email" placeholder="user@gmail.com" required >
+                </div>
+                <div class="subdiv">
+                    <label for="pass">Password: </label>
+                    <input type="password" placeholder="Password" maxlength="12" minlength="8" required>
+                </div>
+                <div class="subdiv">
+                    <label for="DOB">Date Of Birth: </label>
+                    <input class = "dob" type="date" placeholder="DOB" required>
+                </div>
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
